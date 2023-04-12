@@ -85,7 +85,7 @@ const PlansScreen = () => {
       if (error) alert("An error occured", error.message);
       if (sessionId) {
         const stripe = await loadStripe(
-          "pk_test_51MvRKCSFBkowSPLi6RqoIDD0ZMyRDNum1cAKo4kWQAHgSVCWZzMDHfFXCqBeZwRESqB6MBcVVx7wlVOERCXhVhcp00z3u5exHn"
+          "pk_live_51MvRKCSFBkowSPLi1YVy0uJ3AHGRV3Pi9mW5o6zjUdHqJDORosGT2xaCbCVD6zT4RL0nJ2uQ3DXp5Yr34PT9vWBi00mywSR5fV"
         );
         setLoadingStripe(false);
         stripe.redirectToCheckout({ sessionId });
