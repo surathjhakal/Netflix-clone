@@ -1,46 +1,62 @@
-.signup_screen{
-    max-width: 300px;
-    padding: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    background: rgba(0,0,0,0.85);
+.signup_screen {
+  max-width: 300px;
+  padding: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.85);
 }
 
-.signup_screen >form{
-    display: grid;
-    flex-direction: column;
+.signup_screen > form {
+  display: grid;
+  flex-direction: column;
 }
 
-.signup_screen >form >input{
-    padding: 5px 15px;
-    outline-width: 0;
-    height: 40px;
-    margin-bottom: 14px;
-    border: none;
-    border-radius: 5px;
+.signup_screen > form > input {
+  padding: 5px 15px;
+  outline-width: 0;
+  height: 40px;
+  margin-bottom: 14px;
+  border: none;
+  border-radius: 5px;
 }
-.signup_screen > form > button{
-    padding: 16px 20px;
+.signup_screen > form > button {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #e50914;
+  /* outline: none; */
+  border: none;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.signup_screen_grey {
+  color: gray;
+}
+
+.signup_screen_link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.signup_screen > form > h1 {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  .signup_screen {
+    padding: 50px 20px;
+    border-radius: 8px;
+  }
+  .signup_screen > form > input {
+    padding: 2px 15px;
+  }
+  .signup_screen > form > button {
+    padding: 10px 20px;
+  }
+  .signup_screen > form > h4 {
     font-size: 1rem;
-    color: #fff;
-    border-radius: 5px;
-    background-color: #e50914;
-    /* outline: none; */
-    border: none;
-    cursor: pointer;
-    margin: 20px 0;
-}
-
-.signup_screen_grey{
-    color: gray;
-}
-
-.signup_screen_link:hover{
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-.signup_screen >form >h1{
-    text-align: left;
-    margin-bottom: 25px;
+  }
 }

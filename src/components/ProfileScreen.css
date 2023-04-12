@@ -1,5 +1,5 @@
 .profileScreen {
-  height: 100vh;
+  min-height: 100vh;
   color: white;
 }
 
@@ -59,8 +59,91 @@
 
 .profileScreen_plans p {
   color: rgb(136, 135, 135);
+  font-size: 14px;
 }
 
 .profileScreen_info img {
   height: 100px;
+}
+
+.plansScreen {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.plansScreen_plan {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  align-items: center;
+}
+
+.plansScreen_plan:hover {
+  opacity: 1;
+}
+
+.plansScreen_planName {
+  display: flex;
+  flex-direction: column;
+}
+
+.plansScreen_planName h1 {
+  font-size: 16px !important;
+  border: none;
+  margin: 0;
+}
+
+.plansScreen_planName span {
+  font-size: 14px;
+}
+
+.plansScreen_plan button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e50914;
+  padding: 6px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  width: 160px;
+  justify-content: center;
+}
+
+.loadingStripe {
+  height: 24px;
+  width: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .profileScreen_body {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5rem 0;
+  }
+  .profileScreen_body h1 {
+    font-size: 40px;
+  }
+  .profileScreen_info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .profileScreen_details {
+    margin: 0;
+    width: 100%;
+  }
+  .plansScreen_plan button {
+    width: 110px;
+    padding: 4px 6px;
+  }
+  .loadingStripe {
+    height: 10px;
+    width: 10px;
+  }
 }

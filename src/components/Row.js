@@ -12,8 +12,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
 
   useEffect(() => {
     async function fetchData() {
+      // console.log("fetch url", fetchUrl);
       const request = await axios.get(fetchUrl);
       setMovies(request.data.results);
+      // console.log("fetchurl", fetchUrl, request.data.results);
       return request;
     }
     fetchData();
@@ -42,13 +44,14 @@ function Row({ title, fetchUrl, isLargeRow }) {
   };
 
   return (
-    <div className="row">
+    <div className="row_page">
       <h2>{title}</h2>
       <div className="row_posters">
         {movies.map((movie) => {
           return (
-            ((isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)) && (
-                <img
+            ((isLargeRow && movie.poster_path) ||
+              (!isLargeRow && movie.backdrop_path)) && (
+              <img
                 key={movie.id}
                 onClick={() => handleClick(movie)}
                 className={`row_poster ${isLargeRow && "row_posterLarge"}`}
@@ -75,4 +78,3 @@ function Row({ title, fetchUrl, isLargeRow }) {
 }
 
 export default Row;
-

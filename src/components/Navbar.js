@@ -20,7 +20,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className={`navbar ${show && "navbar_black"}`}>
+    <div className={`navbar_custom ${show && "navbar_black"}`}>
       <div className="navbar_contents">
         <img
           onClick={() => history.push("/")}

@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Navbar from "./Navbar";
 import requests from "../HandlingFiles/requests";
 import Row from "./Row";
+import "./HomeScreen.css";
 
 const HomeScreen = () => {
   return (
@@ -13,14 +14,31 @@ const HomeScreen = () => {
         title="Netflix Orignals"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
+        key="Netflix Orignals"
       />
-      <Row title="Trending" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <Row title="Trending" fetchUrl={requests.fetchTrending} key="Trending" />
+      <Row
+        title="Top Rated"
+        fetchUrl={requests.fetchTopRated}
+        key="Top Rated"
+      />
+      <Row title="Crime" fetchUrl={requests.fetchCrimeMovies} key="Crime" />
+      <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} key="Comedy" />
+      <Row
+        title="Mystery"
+        fetchUrl={requests.fetchMysteryMovies}
+        key="Mystery"
+      />
+      <Row
+        title="Romance"
+        fetchUrl={requests.fetchRomanceMovies}
+        key="Romance"
+      />
+      <Row
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+        key="Documentaries"
+      />
     </div>
   );
 };
